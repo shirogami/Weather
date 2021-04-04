@@ -9,7 +9,8 @@ const foreCast = (latitude, longitude, callback) => {
         } else if (response.body.error) { // 
             callback('unable to find location', undefined);
         } else {
-            callback(undefined, response.body.current.weather_descriptions[0] + ', Temperature is ' + response.body.current.temperature);
+            //console.log(response.body.current.humidity);
+            callback(undefined, response.body.current.weather_descriptions[0] + ', Temperature is ' + response.body.current.temperature + ', Humidity is ' + response.body.current.humidity + '%');
         }
     })
 
