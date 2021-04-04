@@ -5,6 +5,7 @@ const hbs = require('hbs');
 const geoCode = require("./utils/geoCode");
 const foreCast = require("./utils/foreCast");
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 console.log(__filename);
@@ -118,6 +119,6 @@ app.get('*', (req, res) => {
 
 // starts server
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is up on port 3000');
 })
